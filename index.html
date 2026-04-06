@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Happy Birthday Semai! 💖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .card {
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            max-width: 500px;
+            width: 100%;
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .cake-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .birthday-date {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .message {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .heart {
+            color: #f5576c;
+            font-size: 1.3em;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .reasons {
+            background: #fef3f4;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .reasons h3 {
+            color: #f5576c;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.3em;
+        }
+
+        .reasons ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .reasons li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .reasons li:before {
+            content: "💖";
+            position: absolute;
+            left: 0;
+        }
+
+        .photo-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .photo-placeholder p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .wish-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(245,87,108,0.3);
+        }
+
+        .wish-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .wish-btn:active {
+            transform: translateY(0);
+        }
+
+        .surprise-message {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f5e9;
+            border-radius: 15px;
+            text-align: center;
+            color: #2e7d32;
+            display: none;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            background: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .balloon {
+            position: fixed;
+            bottom: -100px;
+            font-size: 40px;
+            animation: floatUp 8s ease-in infinite;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-120vh) rotate(20deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8em; }
+            .message { font-size: 1em; }
+            .cake-icon { font-size: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="hero">
+            <div class="cake-icon">🎂🎈</div>
+            <h1>Happy Birthday, Semai! 🎉</h1>
+            <div class="birthday-date">April 7, 2026</div>
+        </div>
+
+        <div class="content">
+            <div class="message">
+                <span class="heart">❤️</span> Today is all about celebrating 
+                <strong>YOU</strong>! <span class="heart">❤️</span>
+                <br><br>
+                You make every day brighter just by being in it.
+            </div>
+
+            <div class="reasons">
+                <h3>✨ Why You're So Special ✨</h3>
+                <ul>
+                    <li>Your smile lights up any room</li>
+                    <li>You have the kindest heart</li>
+                    <li>You're stronger than you know</li>
+                    <li>You make everyone around you better</li>
+                    <li>You deserve ALL the happiness in the world</li>
+                </ul>
+            </div>
+
+            <div class="photo-placeholder">
+                <div style="font-size: 60px;">📸💕</div>
+                <p>Every moment with you is a memory I cherish</p>
+            </div>
+
+            <button class="wish-btn" onclick="showSurprise()">
+                Click for a Special Surprise! 🎁
+            </button>
+
+            <div id="surprise" class="surprise-message">
+                🎉💖 HAPPY BIRTHDAY SEMAI! 💖🎉<br><br>
+                May this year bring you endless joy,<br>
+                unlimited success, and all the love you deserve!<br>
+                You are truly one of a kind! 🌟
+            </div>
+        </div>
+
+        <div class="footer">
+            Made with lots of love 💕 | Celebrating YOU!
+        </div>
+    </div>
+
+    <script>
+        // Create floating balloons
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            const balloons = ['🎈', '🎈', '🎈', '💖', '🎉', '⭐'];
+            balloon.textContent = balloons[Math.floor(Math.random() * balloons.length)];
+            balloon.style.left = Math.random() * 100 + '%';
+            balloon.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            balloon.style.animationDuration = (Math.random() * 4 + 6) + 's';
+            balloon.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(balloon);
+            
+            setTimeout(() => {
+                balloon.remove();
+            }, 10000);
+        }
+
+        // Create balloons every 2 seconds
+        setInterval(createBalloon, 2000);
+
+        // Create initial balloons
+        for(let i = 0; i < 5; i++) {
+            setTimeout(createBalloon, i * 500);
+        }
+
+        function showSurprise() {
+            const surpriseDiv = document.getElementById('surprise');
+            surpriseDiv.style.display = 'block';
+            
+            // Create extra balloons on click
+            for(let i = 0; i < 10; i++) {
+                setTimeout(createBalloon, i * 100);
+            }
+            
+            // Change button text
+            const btn = document.querySelector('.wish-btn');
+            btn.textContent = '💖 You made my day! 💖';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+            
+            // Add confetti effect
+            for(let i = 0; i < 50; i++) {
+                createConfetti();
+            }
+        }
+        
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.style.position = 'fixed';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = '-10px';
+            confetti.style.width = '10px';
+            confetti.style.height = '10px';
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            confetti.style.pointerEvents = 'none';
+            confetti.style.zIndex = '9999';
+            confetti.style.animation = 'floatDown 3s ease-in forwards';
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => confetti.remove(), 3000);
+        }
+        
+        // Add confetti animation style
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatDown {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
